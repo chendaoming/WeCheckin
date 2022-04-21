@@ -1,6 +1,9 @@
 {
-    "miniprogramRoot": "miniprogram/",
-    "cloudfunctionRoot": "cloudfunctions/",
+    "description": "项目配置文件，详见文档：%s",
+    "packOptions": {
+        "ignore": [],
+        "include": []
+    },
     "setting": {
         "urlCheck": true,
         "es6": true,
@@ -22,33 +25,38 @@
         "lazyloadPlaceholderEnable": false,
         "useMultiFrameRuntime": true,
         "useApiHook": true,
-        "useApiHostProcess": false,
+        "useApiHostProcess": true,
         "babelSetting": {
             "ignore": [],
             "disablePlugins": [],
             "outputPath": ""
         },
-        "enableEngineNative": false,
         "useIsolateContext": true,
         "userConfirmedBundleSwitch": false,
         "packNpmManually": false,
         "packNpmRelationList": [],
         "minifyWXSS": true,
-        "showES6CompileOption": false
+        "disableUseStrict": false,
+        "minifyWXML": true,
+        "showES6CompileOption": false,
+        "useCompilerPlugins": false,
+        "ignoreUploadUnusedFiles": true
     },
+    "compileType": "miniprogram",
+    "libVersion": "2.11.1",
     "appid": "wxd4a5be4daf679ace",
     "projectname": "CCAlumniFree",
-    "libVersion": "2.11.1",
-    "simulatorType": "wechat",
-    "simulatorPluginLibVersion": {},
+    "miniprogramRoot": "miniprogram/",
+    "cloudfunctionRoot": "cloudfunctions/",
     "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+    "watchOptions": {
+        "ignore": []
+    },
+    "debugOptions": {
+        "hidedInDevtools": []
+    },
+    "scripts": {},
     "condition": {
-        "search": {
-            "list": []
-        },
-        "conversation": {
-            "list": []
-        },
         "plugin": {
             "list": []
         },
