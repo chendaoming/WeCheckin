@@ -6,7 +6,7 @@
 - 牙科预约凭证：支持线下到场后校验签到/核销/二维码自助签到等多种方式
 - 详尽的预约数据：支持预约名单数据导出Excel，打印
 
-![输入图片说明](demo/%E4%BA%8C%E7%BB%B4%E7%A0%81.png)
+![image](https://user-images.githubusercontent.com/89147095/164364396-1c67ee75-e7b6-4d30-8d0c-b6aa8a9928d6.png)
  
 
 ## 技术运用
@@ -22,13 +22,13 @@
 - 如有疑问，欢迎骚扰联系我鸭：开发交流，技术分享，问题答疑，功能建议收集，版本更新通知，安装部署协助，小程序开发定制等。
 - 俺的微信:
  
- ![输入图片说明](demo/author-base.png)
+![image](https://user-images.githubusercontent.com/89147095/164364413-68cf88b3-5891-4689-8fa0-4866eeaa58d9.png)
 
 
 
 ## 演示
  
- ![输入图片说明](demo/%E4%BA%8C%E7%BB%B4%E7%A0%81.png)
+![image](https://user-images.githubusercontent.com/89147095/164364404-4b8acec0-7d66-46ab-a133-1633cd8ab77e.png)
  
  
 
@@ -40,28 +40,31 @@
 
 
 ## 截图
-![输入图片说明](demo/1%E9%A6%96%E9%A1%B5.png)
-![输入图片说明](demo/2%E6%9C%80%E6%96%B0%E5%8A%A8%E6%80%81.png)
-![输入图片说明](demo/4%E9%A2%84%E7%BA%A6%E6%97%A5%E5%8E%86.png)
-![输入图片说明](demo/3%E7%89%99%E7%A7%91%E5%8F%AA%E6%98%AF.png)
-![输入图片说明](demo/5%E6%88%91%E7%9A%84.png)
- ![输入图片说明](demo/6%E9%A1%B9%E7%9B%AE%E9%A2%84%E7%BA%A6.png)
-![输入图片说明](demo/7%E5%8C%BB%E5%B8%88%E9%A2%84%E7%BA%A6.png)
-![输入图片说明](demo/8%E9%A2%84%E7%BA%A6%E8%AF%A6%E6%83%85.png)
-![输入图片说明](demo/9%E9%A2%84%E7%BA%A6.png)
-![输入图片说明](demo/10%E9%A2%84%E7%BA%A6%E6%88%90%E5%8A%9F.png)
+![image](https://user-images.githubusercontent.com/89147095/164364436-0f6e574d-9e8f-4cc5-974c-4b1eca664d4c.png)
+![image](https://user-images.githubusercontent.com/89147095/164364448-83135519-f14b-4a1c-806b-6ebb1dfa3ac2.png)
+![image](https://user-images.githubusercontent.com/89147095/164364460-8b6711da-7c6f-4691-b121-714d3f692f4a.png)
+![image](https://user-images.githubusercontent.com/89147095/164364474-351e2daa-661e-409d-b4e6-449ce8bf340d.png)
+![image](https://user-images.githubusercontent.com/89147095/164364480-c5ce22bb-4ce9-4fdf-a9ea-a043089b862f.png)
+![image](https://user-images.githubusercontent.com/89147095/164364488-336ead2c-f028-43d1-9e2d-645308add1ba.png)
+![image](https://user-images.githubusercontent.com/89147095/164364494-fc158966-d9ef-4049-a990-6a019b9c7e17.png)
+![image](https://user-images.githubusercontent.com/89147095/164364499-8e0226e7-2707-4e72-80d2-6126117e26ae.png)
+![image](https://user-images.githubusercontent.com/89147095/164364503-cfb151a1-80ce-419e-879a-bf0aeba2fa8d.png)
+![image](https://user-images.githubusercontent.com/89147095/164364508-cc8873b3-90dd-4d64-bf54-ab1afc30294f.png)
 
-## 后台管理系统截图 
-![输入图片说明](demo/11%E5%90%8E%E5%8F%B0-%E9%A6%96%E9%A1%B5.png)
 
-![输入图片说明](demo/12%E5%90%8E%E5%8F%B0-%E9%A2%84%E7%BA%A6%E7%AE%A1%E7%90%86.png)
 
-![输入图片说明](demo/13%E5%90%8E%E5%8F%B0-%E9%A2%84%E7%BA%A6%E6%B7%BB%E5%8A%A0.png)
-![输入图片说明](demo/14%E5%90%8E%E5%8F%B0-%E9%A2%84%E7%BA%A6%E6%97%B6%E6%AE%B5%E8%AE%BE%E7%BD%AE.png)
-![输入图片说明](demo/15%E5%90%8E%E5%8F%B0-%E9%A2%84%E7%BA%A6%E5%90%8D%E5%8D%95.png)
+ 
 
-![输入图片说明](demo/16%E5%90%8E%E5%8F%B0-%E9%A2%84%E7%BA%A6%E5%90%8D%E5%8D%95%E7%AE%A1%E7%90%86.png)
-![输入图片说明](demo/17%E5%90%8E%E5%8F%B0-%E9%A2%84%E7%BA%A6%E8%8F%9C%E5%8D%95.png)
-![输入图片说明](demo/18%E5%90%8E%E5%8F%B0-%E9%A2%84%E7%BA%A6%E5%90%8D%E5%8D%95%E5%AF%BC%E5%87%BA.png)
-![输入图片说明](demo/19%E5%90%8E%E5%8F%B0-%E5%86%85%E5%AE%B9%E7%AE%A1%E7%90%86.png)
-![输入图片说明](demo/20%E5%90%8E%E5%8F%B0-%E5%86%85%E5%AE%B9%E6%B7%BB%E5%8A%A0.png)
+## 后台管理系统截图  
+![image](https://user-images.githubusercontent.com/89147095/164364515-417734ea-3a54-4d0a-8626-c424dcf1cec8.png)
+![image](https://user-images.githubusercontent.com/89147095/164364525-661a9d69-b2a5-4776-9df0-68a5c128ba18.png)
+![image](https://user-images.githubusercontent.com/89147095/164364534-1067c61b-bfb9-43eb-aaca-b2cbba3045be.png)
+![image](https://user-images.githubusercontent.com/89147095/164364540-832eec3d-7b32-4096-be30-da46576694d8.png)
+![image](https://user-images.githubusercontent.com/89147095/164364549-f20f4432-fa66-4d8d-ad51-60060b12a136.png)
+![image](https://user-images.githubusercontent.com/89147095/164364557-fac21598-065f-48ac-ba16-0100858b63ae.png)
+![image](https://user-images.githubusercontent.com/89147095/164364563-e1092e21-1949-4768-a6c9-c30038de2d40.png)
+
+![image](https://user-images.githubusercontent.com/89147095/164364569-4847130b-6507-4353-be68-200b36bbfc10.png)
+![image](https://user-images.githubusercontent.com/89147095/164364580-2f6175b4-8b67-49ff-8ca6-aa80fb008c8b.png)
+![image](https://user-images.githubusercontent.com/89147095/164364590-51bb03fc-ce78-4c8a-999b-865fabdb21aa.png)
+
