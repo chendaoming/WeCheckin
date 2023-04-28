@@ -1,0 +1,114 @@
+@import "../../../style/skin.wxss";
+
+.list {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+
+.list .item {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 30rpx;
+	background-color: #fff;
+	padding: 30rpx 30rpx;
+	border-radius: 25rpx;
+}
+
+.list .item .top {
+	display: flex;
+	padding: 0 0 30rpx;
+	border-bottom: 2rpx dashed #eee;
+}
+
+.list .item .top .left {
+	width: 120rpx;
+	height: 120rpx;
+	border-radius: 15rpx;
+	margin-right: 20rpx;
+}
+
+.list .item .top .right {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+
+.list .item .top .right .name {
+	width: 100%;
+	color: #333;
+	font-size: 36rpx;
+	font-weight: bold;
+	padding: 2rpx 0 30rpx;
+	width: 400rpx;
+}
+
+.list .item .top .right .desc {
+	width: 100%;
+	color: #999;
+	font-size: 28rpx;
+	display: flex;
+	align-items: center;
+}
+
+.list .item .top .go {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	width: 88rpx;
+	height: 88rpx;
+	background-image: linear-gradient(5deg, #fb454c, #eb9a9a);
+	border: 2rpx solid #fb454c;
+	font-size: 22rpx;
+	color: #fff;
+	box-shadow: 5rpx 8rpx 13rpx rgba(226, 43, 68, 0.3);
+}
+
+.list .item .top .go.over {
+	background-image: unset;
+	background-image: linear-gradient(5deg,#30943e,#50eb64);
+	color: #fff;
+	border: 2rpx solid #39b54a;
+	box-shadow: unset;
+}
+
+.list .item .top .go.un {
+	background-image: unset;
+	background-color: #fff;
+	color: #ccc;
+	border: 2rpx solid #ccc;
+	box-shadow: unset;
+}
+
+.list .item .line {
+	width: 100%;
+	padding: 30rpx 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: #999;
+	font-size: 26rpx;
+}
+
+.list .item .line2 {
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.list .item .line2 .target-line {
+	flex: 1;
+}
+
+.list .item .line2 .progress {
+	height: 24rpx;
+}
+
+.list .item .line2 .per {
+	margin-left: 20rpx;
+	font-size: 24rpx;
+	color: #999;
+}

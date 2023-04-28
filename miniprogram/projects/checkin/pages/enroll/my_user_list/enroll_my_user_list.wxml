@@ -1,0 +1,54 @@
+<block wx:if="{{isLoad}}">
+	<cmpt-comm-list type="my_enroll_user" search="{{search||''}}" _menus="{{sortMenus}}" _items="{{sortItems}}" route="enroll/my_user_list" isTotalMenu="{{true}}" sortMenusDefaultIndex="0" topBottom="120" placeholder="搜索" bind:list="bindCommListCmpt">
+
+		<view slot="searchEnd">
+
+		</view>
+
+		<!-- List Begin -->
+		<view class="main">
+			<view class="list">
+				<view class="item shadow-project" wx:for="{{dataList.list}}" wx:key="index">
+					<view class="top" bindtap="url" data-url="../detail/enroll_detail?id={{item.ENROLL_USER_ENROLL_ID}}">
+						<image mode="aspectFill" lazy-load="{{true}}" class="loading left" src="{{item.enroll.ENROLL_OBJ.cover[0]}}" />
+						<view class="right">
+							<view class="name">{{item.enroll.ENROLL_TITLE}}</view>
+							<view class="desc"><text class="tag small radius bg-red light margin-right-xs">{{item.enroll.ENROLL_CATE_NAME}}</text>{{item.enroll.ENROLL_USER_CNT}}人已打卡 </view>
+						</view>
+						<view wx:if="{{item.status=='进行中'}}" class="go">去打卡</view>
+						<view wx:elif="{{item.status=='已打卡'}}" class="go over">{{item.status}}</view>
+						<view wx:else class="go un">{{item.status}}</view>
+
+					</view>
+
+					<view class="line">
+						<view>打卡进度：已打卡{{item.ENROLL_USER_JOIN_CNT}}天/共{{item.enroll.ENROLL_DAY_CNT}}天<text wx:if="{{item.ENROLL_USER_LAST_DAY}}">，最近{{item.last}}</text></view>
+						<text class="icon-moreandroid" style="text-align: right;height: 40rpx;" bindtap="url" data-url="../my_join_list/enroll_my_join_list?id={{item.ENROLL_USER_ENROLL_ID}}">详单</text>
+					</view>
+
+					<view class="line2" bindtap="url" data-url="../my_join_detail/enroll_my_join_detail?id={{item._id}}">
+						<view class="target-line progress round">
+							<view class="bg-project" style="width:{{item.per>100?'100':item.per}}%"></view>
+						</view>
+						<view class="per"><text class="text-project margin-right-xs">{{item.per}}%</text>/<text class="margin-left-xs">100%</text></view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<!-- List END -->
+
+		<!--load begin-->
+		<import src="../../../../../tpls/public/list_load_tpl.wxml" />
+		<template is="listLoadTpl" data="{{skin:'load-project',dataList}}" />
+		<!--load end-->
+
+	</cmpt-comm-list>
+
+
+
+	<block wx:if="{{skin.IS_SUB}}">
+		<import src="../../tpls/menu_tpl.wxml" />
+		<template is="menuTpl" data="{{curMenu:'checkin',returnHome:false}}" />
+	</block>
+
+</block>

@@ -1,0 +1,100 @@
+{
+	"pages": [
+		"projects/checkin/pages/default/index/default_index",
+		"projects/checkin/pages/about/index/about_index",
+		"projects/checkin/pages/search/search",
+		"projects/checkin/pages/my/index/my_index",
+		"projects/checkin/pages/my/reg/my_reg",
+		"projects/checkin/pages/my/edit/my_edit",
+		"projects/checkin/pages/my/foot/my_foot",
+		"projects/checkin/pages/my/fav/my_fav",
+		"projects/checkin/pages/news/index/news_index",
+		"projects/checkin/pages/news/detail/news_detail",
+		"projects/checkin/pages/news/cate1/news_cate1",
+		"projects/checkin/pages/admin/news/list/admin_news_list",
+		"projects/checkin/pages/admin/news/add/admin_news_add",
+		"projects/checkin/pages/admin/news/edit/admin_news_edit",
+		"projects/checkin/pages/admin/setup/about/admin_setup_about",
+		"projects/checkin/pages/admin/setup/about_list/admin_setup_about_list",
+		"projects/checkin/pages/admin/setup/qr/admin_setup_qr",
+		"projects/checkin/pages/admin/index/home/admin_home",
+		"projects/checkin/pages/admin/index/login/admin_login",
+		"projects/checkin/pages/admin/content/admin_content",
+		"projects/checkin/pages/admin/mgr/log/admin_log_list",
+		"projects/checkin/pages/admin/mgr/edit/admin_mgr_edit",
+		"projects/checkin/pages/admin/mgr/list/admin_mgr_list",
+		"projects/checkin/pages/admin/mgr/add/admin_mgr_add",
+		"projects/checkin/pages/admin/mgr/pwd/admin_mgr_pwd",
+		"projects/checkin/pages/admin/user/list/admin_user_list",
+		"projects/checkin/pages/admin/user/detail/admin_user_detail",
+		"projects/checkin/pages/admin/user/export/admin_user_export",
+		"projects/checkin/pages/enroll/index/enroll_index",
+		"projects/checkin/pages/enroll/detail/enroll_detail",
+		"projects/checkin/pages/enroll/my_join_list/enroll_my_join_list",
+		"projects/checkin/pages/enroll/my_user_list/enroll_my_user_list",
+		"projects/checkin/pages/admin/enroll/list/admin_enroll_list",
+		"projects/checkin/pages/admin/enroll/add/admin_enroll_add",
+		"projects/checkin/pages/admin/enroll/edit/admin_enroll_edit",
+		"projects/checkin/pages/admin/enroll/join_list/admin_enroll_join_list",
+		"projects/checkin/pages/admin/enroll/export/admin_enroll_export",
+		"cmpts/public/form/form_set/field/form_set_field",
+		"cmpts/public/form/form_show/content/form_show_content",
+		"pages/test1/test1"
+	],
+	"window": {
+		"backgroundColor": "#f1f1f1",
+		"backgroundTextStyle": "dark",
+		"navigationBarBackgroundColor": "#ffffff",
+		"navigationBarTitleText": "CC打卡小程序",
+		"navigationBarTextStyle": "black"
+	},
+	"tabBar": {
+		"custom": false,
+		"backgroundColor": "#FFFFFF",
+		"color": "#999999",
+		"selectedColor": "#fb454c",
+		"list": [
+			{
+				"pagePath": "projects/checkin/pages/default/index/default_index",
+				"text": "首页",
+				"iconPath": "/projects/checkin/images/tabbar/home.png",
+				"selectedIconPath": "/projects/checkin/images/tabbar/home_cur.png"
+			},
+			{
+				"pagePath": "projects/checkin/pages/news/index/news_index",
+				"text": "通知",
+				"iconPath": "/projects/checkin/images/tabbar/news.png",
+				"selectedIconPath": "/projects/checkin/images/tabbar/news_cur.png"
+			},
+			{
+				"pagePath": "projects/checkin/pages/enroll/index/enroll_index",
+				"text": "打卡任务",
+				"iconPath": "/projects/checkin/images/tabbar/enroll.png",
+				"selectedIconPath": "/projects/checkin/images/tabbar/enroll_cur.png"
+			},
+			{
+				"pagePath": "projects/checkin/pages/enroll/my_user_list/enroll_my_user_list",
+				"text": "我的打卡",
+				"iconPath": "/projects/checkin/images/tabbar/checkin.png",
+				"selectedIconPath": "/projects/checkin/images/tabbar/checkin_cur.png"
+			},
+			{
+				"pagePath": "projects/checkin/pages/my/index/my_index",
+				"text": "个人中心",
+				"iconPath": "/projects/checkin/images/tabbar/my.png",
+				"selectedIconPath": "/projects/checkin/images/tabbar/my_cur.png"
+			}
+		]
+	}, 
+	"permission": {
+		"scope.userLocation": {
+			"desc": "获取你当前位置信息用于小程序位置接口的效果展示"
+		}
+	},
+	"usingComponents": {
+		"cmpt-comm-list": "/cmpts/public/list/comm_list_cmpt",
+		"cmpt-picker": "/cmpts/public/picker/picker_cmpt",
+		"cmpt-modal": "/cmpts/public/modal/modal_cmpt"
+	},
+	"sitemapLocation": "sitemap.json"
+}

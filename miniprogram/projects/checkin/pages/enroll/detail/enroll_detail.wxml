@@ -1,0 +1,85 @@
+<view wx:if="{{isLoad===null}}" class="margin-top load notexist text-l load-project"></view>
+<view wx:if="{{isLoad===false}}" class="margin-top load loading text-l load-project"></view>
+
+<block wx:if="{{isLoad}}">
+	<view class="main">
+		<view class="top">
+			<image lazy-load="{{true}}" mode="aspectFill" class="left loading" src="{{enroll.ENROLL_OBJ.cover[0]}}" />
+			<view class="right">
+				<view class="title">{{enroll.ENROLL_TITLE}}</view>
+				<view class="desc">{{enroll.ENROLL_OBJ.desc}}</view>
+				<!--
+				<view class="oprt">
+					<view>收藏</view>
+					<view>分享</view>
+				</view>-->
+				<cmpt-detail class="oprt" mode="btn" topBtnShow="{{topBtnShow}}" oid="{{enroll._id}}" cate="{{enroll.ENROLL_CATE_NAME}}" title="{{enroll.ENROLL_TITLE}}" cover="{{enroll.ENROLL_OBJ.cover[0]}}" qr="{{enroll.ENROLL_QR}}" desc="马上来打卡吧" bg="#fb454c">
+				</cmpt-detail>
+
+			</view>
+		</view>
+		<view class="detail">
+			<view class="inner shadow-project">
+				<view class="line">
+					<view bindtap="bindCurTap" class="item {{cur=='content'?'cur':''}}" data-cur="content">详情介绍</view>
+					<view bindtap="bindCurTap" class="item {{cur=='rank'?'cur':''}}" data-cur="rank">排行榜</view>
+					<view bindtap="bindCurTap" class="item {{cur=='activity'?'cur':''}}" data-cur="activity">打卡动态</view>
+				</view>
+
+				<view wx:if="{{cur=='content'}}" class="article-box margin-top-xxs">
+					<view class="article">
+						<view class="date">时间：{{enroll.start}} ~ {{enroll.end}}</view>
+						<block wx:for="{{enroll.ENROLL_OBJ.content}}" wx:key="key">
+							<view class="content" wx:if="{{item.type=='text'}}">
+								<text user-select="{{true}}">{{item.val}}</text>
+							</view>
+
+							<view class="pics" wx:if="{{item.type=='img'}}">
+								<image bindtap="url" data-type='img' data-url="{{item.val}}" show-menu-by-longpress="{{true}}" class="loading" mode='widthFix' lazy-load="true" src="{{item.val}}">
+								</image>
+							</view>
+						</block>
+					</view>
+				</view>
+
+				<view class="rank" wx:if="{{cur=='rank'}}">
+					<view wx:if="{{!enroll.rankList||enroll.rankList.length==0}}" class="no"><text class="icon-emoji margin-right-xxs"></text>暂无打卡记录与排行~</view>
+					<view wx:for="{{enroll.rankList}}" wx:key="key" class="item">
+						<view wx:if="{{index<8}}" class="no">0{{index+1}}</view>
+						<view wx:else class="no">{{index+1}}</view>
+						<image mode="aspectFill" lazy-load="{{true}}" class="loading left" src="{{item.user.USER_PIC}}" />
+						<view class="right">
+							<view class="name text-cut">{{item.user.USER_NAME}}</view>
+							<view class="desc">打卡{{item.ENROLL_USER_JOIN_CNT}}次 <text class="margin-left-s">最近{{item.ENROLL_USER_LAST_DAY}}</text></view>
+						</view>
+					</view>
+				</view>
+
+				<block wx:if="{{cur=='activity'}}">
+					<view class=" time">
+						<scroll-view scroll-into-view="day-{{day}}" scroll-x class="date-select" enable-flex="{{true}}">
+							<view bindtap="bindJoinDayTap" data-day="{{item.day}}" id="day-{{item.day}}" class="item {{item.day==day?'cur':''}}" wx:for="{{enroll.dayList}}" wx:key="key">
+								<view class="month">{{item.month}}</view>
+								<view class="date">{{item.date}}</view>
+							</view>
+						</scroll-view>
+					</view>
+					<view class="users">
+						<view wx:if="{{!activity||activity.length==0}}" class="no"><text class="icon-emoji margin-right-xxs"></text>暂无打卡记录~</view>
+						<view wx:for="{{activity}}" wx:key="key" class="item">
+							<image mode="aspectFill" class="loading" src="{{item.user.USER_PIC}}" />
+							<view class="name text-cut">{{item.user.USER_NAME}}</view>
+						</view>
+					</view>
+				</block>
+			</view>
+		</view>
+	</view>
+
+	<view class="bottom safe-bottom">
+		<view bindtap="bindJoinTap" wx:if="{{enroll.statusDesc=='进行中'&&!enroll.myEnrollJoinId}}" class="inner">去打卡</view>
+		<view wx:elif="{{enroll.statusDesc=='进行中'&&enroll.myEnrollJoinId}}" class="inner over">已打卡</view>
+		<view wx:else class="inner over">{{enroll.statusDesc}}</view>
+	</view>
+
+</block>

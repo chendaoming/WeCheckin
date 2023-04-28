@@ -1,0 +1,120 @@
+<view class="main">
+	<view class="up">
+		<image mode="widthFix" src="../../../images/home.jpg" />
+	</view>
+	<view class="down">
+		<view class="menu card-project">
+			<view bindtap="url" data-url="../../enroll/index/enroll_index?id=1" class="item">
+				<view class="item-inner">
+					<view class="img">
+						<image src="../../../images/menu/1.png" />
+					</view>
+					<view class="title">学习</view>
+				</view>
+			</view>
+
+			<view bindtap="url" data-url="../../enroll/index/enroll_index?id=2" class="item">
+				<view class="item-inner">
+					<view class="img">
+						<image src="../../../images/menu/2.png" />
+					</view>
+					<view class="title">兴趣</view>
+				</view>
+			</view>
+
+			<view bindtap="url" data-type="relaunch" data-url="../../enroll/index/enroll_index?id=3" class="item">
+				<view class="item-inner">
+					<view class="img">
+						<image src="../../../images/menu/3.png" />
+					</view>
+					<view class="title">生活</view>
+				</view>
+			</view>
+
+			<view bindtap="url" data-type="relaunch" data-url="../../enroll/index/enroll_index?id=4" class="item">
+				<view class="item-inner">
+					<view class="img">
+						<image src="../../../images/menu/4.png" />
+					</view>
+					<view class="title">运动</view>
+				</view>
+			</view>
+
+			<view bindtap="url" data-type="relaunch" data-url="../../enroll/index/enroll_index?id=5" class="item">
+				<view class="item-inner">
+					<view class="img">
+						<image src="../../../images/menu/5.png" />
+					</view>
+					<view class="title">工作</view>
+				</view>
+			</view>
+
+		</view>
+
+		<view class="tab-line">
+			<view class="item">推荐</view> 
+			<view bindtap="url" data-url="../../enroll/index/enroll_index" data-type="relaunch" class="item1">全部</view>
+		</view>
+
+		<view wx:if="{{!vouchList}}" class="margin-top load loading text-l load-project"></view>
+
+		<!--横向拖动 Begin-->
+		<view class="scroll-x">
+			<scroll-view scroll-x="{{true}}" class="scroll-list">
+				<view class="item" wx:for="{{vouchList}}" wx:key="key" bindtap="url" data-url="../../enroll/detail/enroll_detail?id={{item._id}}"> 
+					<view class="cover"> 
+						<image lazy-load="{{true}}" class="loading" src="{{item.ENROLL_OBJ.vouch[0]||item.ENROLL_OBJ.cover[0]}}" mode="aspectFill"></image>
+						<view class="title text-cut">{{item.ENROLL_TITLE}}</view>
+					</view> 
+
+					<view class="users">
+						<view class="pic-group">
+							<image wx:if="{{idx<3}}" wx:for="{{item.ENROLL_USER_LIST}}" wx:key="key1" wx:for-item="itm" wx:for-index="idx" class="pic round loading" mode="aspectFill" lazy-load="{{true}}" src="{{itm.pic}}" />
+						</view>
+						<text wx:if="{{item.ENROLL_USER_CNT>0}}" class="num">+{{item.ENROLL_USER_CNT}}人参与</text>
+						<text wx:else class="num">{{item.ENROLL_USER_CNT}}人参与</text>
+					</view>
+				</view>
+			</scroll-view>
+		</view>
+		<!--横向拖动 END-->
+
+		<view class="tab-line1"> 
+			<view bindtap="bindCurTap" data-cur="hot" class="item {{cur=='hot'?'cur':''}}">热门</view>
+			<view bindtap="bindCurTap" data-cur="new" class="item {{cur=='new'?'cur':''}}">最新</view>
+		</view>
+
+		<!-- List Begin -->
+		<view wx:if="{{!newList||!hotList}}" class="margin-top load loading text-l load-project"></view>
+
+		<view class="list" wx:if="{{cur=='new'}}">
+			<view wx:for="{{newList}}" wx:key="key" class="item" bindtap="url" data-url="../../enroll/detail/enroll_detail?id={{item._id}}">
+				<image mode="aspectFill" lazy-load="{{true}}" class="left loading" src="{{item.ENROLL_OBJ.cover[0]}}">
+				</image>
+				<view class="right">
+					<view class="title content-cut-one">{{item.ENROLL_TITLE}}</view>
+					<view class="desc">
+						<text class="tag small radius bg-red light margin-right-xs">{{item.ENROLL_CATE_NAME}}</text>
+						<text>{{item.ENROLL_USER_CNT}}人参与 </text>
+					</view>
+				</view>
+				<text class="icon-right text-gray margin-left-s"></text>
+			</view>
+		</view>
+
+		<view class="list" wx:if="{{cur=='hot'}}">
+			<view wx:for="{{hotList}}" wx:key="key" class="item" bindtap="url" data-url="../../enroll/detail/enroll_detail?id={{item._id}}">
+				<image mode="aspectFill" lazy-load="{{true}}" class="left loading" src="{{item.ENROLL_OBJ.cover[0]}}">
+				</image>
+				<view class="right">
+					<view class="title content-cut-one">{{item.ENROLL_TITLE}}</view>
+					<view class="desc">
+						<text class="content-cut-two"><text class="tag small radius bg-red light margin-right-xs">{{item.ENROLL_CATE_NAME}}</text>{{item.ENROLL_USER_CNT}}人参与 </text>
+					</view>
+				</view>
+				<text class="icon-right text-gray margin-left-s"></text>
+			</view>
+		</view>
+		<!-- List END -->
+	</view>
+</view> 

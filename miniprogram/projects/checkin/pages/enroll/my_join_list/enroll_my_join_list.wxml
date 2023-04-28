@@ -1,0 +1,27 @@
+<block wx:if="{{isLoad&&params}}">
+	<cmpt-comm-list type="my_enroll_join" _params="{{params}}" search="{{search||''}}" _menus="{{sortMenus}}" _items="{{sortItems}}" route="enroll/my_join_list" isTotalMenu="{{false}}" sortMenusDefaultIndex="0" topBottom="120" placeholder="搜索" bind:list="bindCommListCmpt">
+
+		<view slot="searchEnd">
+
+		</view>
+
+		<!-- List Begin -->
+		<view class="main">
+			<view class="list">
+				<view class="item shadow-project" wx:for="{{dataList.list}}" wx:key="index"> 
+					<view>第{{dataList.list.length-index}}次 </view>
+					<view class="margin-left-s">{{item.ENROLL_JOIN_ADD_TIME}}</view>
+				</view>
+			</view>
+		</view>
+		<!-- List END -->
+
+		<!--load begin-->
+		<import src="../../../../../tpls/public/list_load_tpl.wxml" />
+		<template is="listLoadTpl" data="{{skin:'load-project',dataList}}" />
+		<!--load end-->
+
+	</cmpt-comm-list>
+
+
+</block>

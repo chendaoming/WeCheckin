@@ -1,0 +1,17 @@
+@import "../../../style/skin.wxss";
+
+.list {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+} 
+
+.list .item {
+	width: 100%;
+	display: flex; 
+	margin-bottom: 30rpx;
+	background-color: #fff;
+	padding: 30rpx 30rpx;
+	border-radius: 25rpx;
+	justify-content: space-between;
+} 

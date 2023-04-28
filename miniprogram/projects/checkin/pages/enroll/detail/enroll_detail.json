@@ -1,0 +1,9 @@
+{
+	"usingComponents": { 
+		"cmpt-detail": "/cmpts/biz/detail/detail_cmpt" 
+	},
+	"enablePullDownRefresh": true,  
+	"navigationBarTextStyle": "white",
+	"navigationBarBackgroundColor": "#fb454c",
+	"navigationBarTitleText": "" 
+}

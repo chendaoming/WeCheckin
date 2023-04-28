@@ -1,0 +1,111 @@
+@import "../../../style/skin.wxss";
+
+.main {
+	padding: 10rpx !important;
+}
+
+.list {
+	width: 100%;
+	padding: 20rpx;
+	display: flex;
+	flex-direction: column;
+}
+
+.list .item {
+	width: 100%;
+	display: flex;
+	background-color: #fff;
+	padding: 30rpx;
+	border-radius: 20rpx;
+	margin-bottom: 30rpx;
+	overflow: hidden;
+	position: relative;
+}
+
+.list .item .status {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: linear-gradient(45deg, #fb454c, #eb9a9a);
+	color: #fff;
+	padding: 6rpx 20rpx;
+	z-index: 9;
+	border-bottom-right-radius: 20rpx;
+	font-size: 24rpx;
+}
+
+.list .item .left {
+	width: 190rpx;
+	height: 190rpx;
+	border-radius: 14rpx;
+	margin-right: 25rpx;
+}
+
+.list .item .right {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.list .item .right .title {
+	width: 100%;
+	font-size: 30rpx;
+	font-weight: bold;
+	color: #333;
+	margin-bottom: 20rpx;
+}
+
+.list .item .right .desc {
+	width: 100%;
+	font-size: 26rpx;
+	color: #999;
+	margin-bottom: 10rpx;
+}
+
+.list .item .right .line {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 24rpx;
+}
+
+.list .item .right .line .join {
+	background-color: var(--projectColor);
+	color: #fff;
+	font-size: 24rpx;
+	padding: 12rpx 25rpx;
+	border-radius: 30rpx;
+}
+
+.list .item .right .line .users {
+	flex: 1;
+	display: flex;
+	align-items: center;  
+}
+
+.list .item .right .line .users .pic-group {
+	display: flex;
+	padding: 0 10rpx 0 0rpx; 
+	align-items: center;
+}
+
+.list .item .right .line .users .pic-group .pic {
+	width: 48rpx !important;
+	height: 48rpx !important;
+}
+
+.list .item .right .line .users .pic-group .pic {
+	margin-left: -20rpx;
+	border: 4rpx solid #fff;
+	vertical-align: middle;
+} 
+
+.list .item .right .line .users .pic-group .pic:first-child {
+	margin-left: 0rpx; 
+} 
+
+.list .item .right .line .users .num {
+	font-size: 24rpx;
+	color: #bbb;
+}
